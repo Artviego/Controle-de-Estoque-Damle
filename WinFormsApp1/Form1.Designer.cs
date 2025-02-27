@@ -44,21 +44,17 @@
             label5 = new Label();
             label4 = new Label();
             pictureBox4 = new PictureBox();
-            pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            pictureBox3 = new PictureBox();
             label10 = new Label();
+            button1 = new Button();
+            label11 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(403, 95);
+            label1.Location = new Point(371, 95);
             label1.Name = "label1";
             label1.Size = new Size(18, 15);
             label1.TabIndex = 0;
@@ -68,7 +64,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(403, 157);
+            label2.Location = new Point(371, 157);
             label2.Name = "label2";
             label2.Size = new Size(41, 15);
             label2.TabIndex = 1;
@@ -77,7 +73,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(403, 218);
+            label3.Location = new Point(371, 218);
             label3.Name = "label3";
             label3.Size = new Size(39, 15);
             label3.TabIndex = 2;
@@ -85,34 +81,36 @@
             // 
             // txtID
             // 
-            txtID.BackColor = SystemColors.Window;
-            txtID.Location = new Point(403, 113);
+            txtID.BackColor = Color.LightGray;
+            txtID.Location = new Point(371, 113);
             txtID.Name = "txtID";
-            txtID.Size = new Size(100, 23);
+            txtID.Size = new Size(137, 23);
             txtID.TabIndex = 3;
             // 
             // txtSenha
             // 
-            txtSenha.Location = new Point(403, 236);
+            txtSenha.BackColor = Color.LightGray;
+            txtSenha.Location = new Point(371, 236);
             txtSenha.Name = "txtSenha";
-            txtSenha.Size = new Size(100, 23);
+            txtSenha.Size = new Size(137, 23);
             txtSenha.TabIndex = 4;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(403, 175);
+            txtEmail.BackColor = Color.LightGray;
+            txtEmail.Location = new Point(371, 175);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(100, 23);
+            txtEmail.Size = new Size(137, 23);
             txtEmail.TabIndex = 5;
             // 
             // btnAdicionarUsuario
             // 
-            btnAdicionarUsuario.BackColor = SystemColors.WindowText;
+            btnAdicionarUsuario.BackColor = SystemColors.Highlight;
             btnAdicionarUsuario.Font = new Font("Georgia", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAdicionarUsuario.ForeColor = SystemColors.Window;
-            btnAdicionarUsuario.Location = new Point(403, 289);
+            btnAdicionarUsuario.Location = new Point(387, 290);
             btnAdicionarUsuario.Name = "btnAdicionarUsuario";
-            btnAdicionarUsuario.Size = new Size(90, 35);
+            btnAdicionarUsuario.Size = new Size(105, 35);
             btnAdicionarUsuario.TabIndex = 6;
             btnAdicionarUsuario.Text = "Salvar";
             btnAdicionarUsuario.UseVisualStyleBackColor = false;
@@ -216,45 +214,38 @@
             pictureBox4.TabIndex = 0;
             pictureBox4.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(367, 109);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(30, 27);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 8;
-            pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(367, 171);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(30, 27);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 9;
-            pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(379, 236);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(18, 17);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 10;
-            pictureBox3.TabStop = false;
-            // 
             // label10
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Georgia", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label10.Location = new Point(379, 43);
+            label10.Location = new Point(371, 43);
             label10.Name = "label10";
             label10.Size = new Size(137, 29);
             label10.TabIndex = 11;
             label10.Text = "Cadastre-se";
+            // 
+            // button1
+            // 
+            button1.BackColor = SystemColors.Window;
+            button1.Font = new Font("Georgia", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.ForeColor = SystemColors.Highlight;
+            button1.Location = new Point(403, 385);
+            button1.Name = "button1";
+            button1.Size = new Size(79, 24);
+            button1.TabIndex = 12;
+            button1.Text = "Login";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Georgia", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label11.Location = new Point(351, 359);
+            label11.Name = "label11";
+            label11.Size = new Size(193, 23);
+            label11.TabIndex = 13;
+            label11.Text = "Já possui uma conta?";
             // 
             // Form1
             // 
@@ -262,10 +253,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonFace;
             ClientSize = new Size(585, 420);
+            Controls.Add(label11);
+            Controls.Add(button1);
             Controls.Add(label10);
-            Controls.Add(pictureBox3);
-            Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
             Controls.Add(panel1);
             Controls.Add(btnAdicionarUsuario);
             Controls.Add(txtEmail);
@@ -280,9 +270,6 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -297,9 +284,6 @@
         private TextBox txtEmail;
         private Button btnAdicionarUsuario;
         private Panel panel1;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
         private PictureBox pictureBox4;
         private Label label4;
         private Label label5;
@@ -308,5 +292,7 @@
         private Label label8;
         private Label label9;
         private Label label10;
+        private Button button1;
+        private Label label11;
     }
 }

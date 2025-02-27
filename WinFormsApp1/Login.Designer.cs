@@ -30,21 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             label1 = new Label();
-            pictureBox1 = new PictureBox();
-            txtID = new TextBox();
+            txtIdLogin = new TextBox();
             label2 = new Label();
-            pictureBox2 = new PictureBox();
-            txtEmail = new TextBox();
+            txtEmailLogin = new TextBox();
             label3 = new Label();
-            pictureBox3 = new PictureBox();
-            txtSenha = new TextBox();
+            txtSenhaLogin = new TextBox();
             label4 = new Label();
             btnAdicionarUsuario = new Button();
             panel1 = new Panel();
             pictureBox4 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
@@ -62,80 +56,52 @@
             label1.Text = "Login";
             label1.Click += label1_Click;
             // 
-            // pictureBox1
+            // txtIdLogin
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(49, 111);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(30, 27);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 11;
-            pictureBox1.TabStop = false;
-            // 
-            // txtID
-            // 
-            txtID.BackColor = SystemColors.Window;
-            txtID.Location = new Point(85, 115);
-            txtID.Name = "txtID";
-            txtID.Size = new Size(100, 23);
-            txtID.TabIndex = 10;
+            txtIdLogin.BackColor = Color.LightGray;
+            txtIdLogin.Location = new Point(68, 115);
+            txtIdLogin.Name = "txtIdLogin";
+            txtIdLogin.Size = new Size(133, 23);
+            txtIdLogin.TabIndex = 10;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(123, 97);
+            label2.Location = new Point(69, 97);
             label2.Name = "label2";
             label2.Size = new Size(18, 15);
             label2.TabIndex = 9;
             label2.Text = "ID";
             // 
-            // pictureBox2
+            // txtEmailLogin
             // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(49, 174);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(30, 27);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 14;
-            pictureBox2.TabStop = false;
-            // 
-            // txtEmail
-            // 
-            txtEmail.Location = new Point(85, 178);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(100, 23);
-            txtEmail.TabIndex = 13;
+            txtEmailLogin.BackColor = Color.LightGray;
+            txtEmailLogin.Location = new Point(68, 178);
+            txtEmailLogin.Name = "txtEmailLogin";
+            txtEmailLogin.Size = new Size(133, 23);
+            txtEmailLogin.TabIndex = 13;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(111, 160);
+            label3.Location = new Point(69, 160);
             label3.Name = "label3";
             label3.Size = new Size(41, 15);
             label3.TabIndex = 12;
             label3.Text = "E-mail";
             // 
-            // pictureBox3
+            // txtSenhaLogin
             // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(61, 240);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(18, 17);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 17;
-            pictureBox3.TabStop = false;
-            // 
-            // txtSenha
-            // 
-            txtSenha.Location = new Point(85, 240);
-            txtSenha.Name = "txtSenha";
-            txtSenha.Size = new Size(100, 23);
-            txtSenha.TabIndex = 16;
+            txtSenhaLogin.BackColor = Color.LightGray;
+            txtSenhaLogin.Location = new Point(68, 240);
+            txtSenhaLogin.Name = "txtSenhaLogin";
+            txtSenhaLogin.Size = new Size(133, 23);
+            txtSenhaLogin.TabIndex = 16;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(111, 222);
+            label4.Location = new Point(68, 222);
             label4.Name = "label4";
             label4.Size = new Size(39, 15);
             label4.TabIndex = 15;
@@ -143,15 +109,16 @@
             // 
             // btnAdicionarUsuario
             // 
-            btnAdicionarUsuario.BackColor = SystemColors.WindowText;
+            btnAdicionarUsuario.BackColor = SystemColors.Highlight;
             btnAdicionarUsuario.Font = new Font("Georgia", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAdicionarUsuario.ForeColor = SystemColors.Window;
-            btnAdicionarUsuario.Location = new Point(85, 287);
+            btnAdicionarUsuario.Location = new Point(85, 285);
             btnAdicionarUsuario.Name = "btnAdicionarUsuario";
-            btnAdicionarUsuario.Size = new Size(90, 35);
+            btnAdicionarUsuario.Size = new Size(83, 33);
             btnAdicionarUsuario.TabIndex = 18;
             btnAdicionarUsuario.Text = "Entrar";
             btnAdicionarUsuario.UseVisualStyleBackColor = false;
+            btnAdicionarUsuario.Click += btnAdicionarUsuario_Click;
             // 
             // panel1
             // 
@@ -179,21 +146,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(256, 341);
             Controls.Add(btnAdicionarUsuario);
-            Controls.Add(pictureBox3);
-            Controls.Add(txtSenha);
+            Controls.Add(txtSenhaLogin);
             Controls.Add(label4);
-            Controls.Add(pictureBox2);
-            Controls.Add(txtEmail);
+            Controls.Add(txtEmailLogin);
             Controls.Add(label3);
-            Controls.Add(pictureBox1);
-            Controls.Add(txtID);
+            Controls.Add(txtIdLogin);
             Controls.Add(label2);
             Controls.Add(panel1);
             Name = "Login";
             Text = "Login";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
@@ -204,14 +165,11 @@
         #endregion
 
         private Label label1;
-        private PictureBox pictureBox1;
-        private TextBox txtID;
+        private TextBox txtIdLogin;
         private Label label2;
-        private PictureBox pictureBox2;
-        private TextBox txtEmail;
+        private TextBox txtEmailLogin;
         private Label label3;
-        private PictureBox pictureBox3;
-        private TextBox txtSenha;
+        private TextBox txtSenhaLogin;
         private Label label4;
         private Button btnAdicionarUsuario;
         private Panel panel1;

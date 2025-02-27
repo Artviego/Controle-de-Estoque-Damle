@@ -45,7 +45,7 @@ namespace WinFormsApp1
         {
             try
             {
-                string query = "SELECT * FROM usuário";
+                string query = "SELECT * FROM usuario";
                 MySqlDataAdapter dataA = new MySqlDataAdapter(query, Conexao);
                 DataTable dataT = new DataTable();
                 dataA.Fill(dataT);
@@ -68,6 +68,14 @@ namespace WinFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtID.Text) ||
+                string.IsNullOrEmpty(txtEmail.Text) ||
+                string.IsNullOrEmpty(txtSenha.Text))
+            {
+                MessageBox.Show("Todos os campos devem ser preenchidos.");
+                return;
+            }
+
             try
             {
                 // Criar conexão com o MySQL
@@ -104,8 +112,16 @@ namespace WinFormsApp1
             }
             finally
             {
-                Conexao.Close();
+                Conexao.Close(); // Garante que a conexão será fechada após a execução
             }
+        }
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            t1 = new Thread(abrirJanela);
+            t1.SetApartmentState(ApartmentState.STA);
+            t1.Start();
+
         }
 
         private void abrirJanela(object obj)
