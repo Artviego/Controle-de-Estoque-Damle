@@ -15,30 +15,7 @@ namespace WinFormsApp1
         {
             InitializeComponent();
             Conexao = new MySqlConnection("server=localhost;username=root;password=;database=sistema_gestao_pecas");
-            CarregarDadosPeca();
             CarregarDadosUsuario();
-        }
-
-        private void CarregarDadosPeca()
-        {
-            try
-            {
-                Conexao.Open();
-                string query = "SELECT * FROM peca";
-                MySqlDataAdapter dataA = new MySqlDataAdapter(query, Conexao);
-                DataTable dataT = new DataTable();
-                dataA.Fill(dataT);
-
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro: " + ex.Message);
-            }
-            finally
-            {
-                Conexao.Close();
-            }
         }
 
         private void CarregarDadosUsuario()
@@ -80,7 +57,7 @@ namespace WinFormsApp1
             {
                 // Criar conexão com o MySQL
                 Conexao.Open();
-                string query = "INSERT INTO usuário (id_usuario, email, senha) " +
+                string query = "INSERT INTO usuario (id_usuario, email, senha) " +
                                "VALUES (@id_usuario, @email, @senha)";
 
                 MySqlCommand cmd = new MySqlCommand(query, Conexao);
@@ -128,7 +105,10 @@ namespace WinFormsApp1
         {
             Application.Run(new Login());
         }
-
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 

@@ -39,6 +39,7 @@
             btnAdicionarUsuario = new Button();
             panel1 = new Panel();
             pictureBox4 = new PictureBox();
+            btnSair = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
@@ -46,10 +47,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.BackColor = Color.DarkRed;
+            label1.BackColor = Color.Silver;
             label1.Font = new Font("Georgia", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.Window;
-            label1.Location = new Point(98, 28);
+            label1.Location = new Point(74, 28);
             label1.Name = "label1";
             label1.Size = new Size(83, 31);
             label1.TabIndex = 0;
@@ -110,9 +111,13 @@
             // btnAdicionarUsuario
             // 
             btnAdicionarUsuario.BackColor = SystemColors.Highlight;
+            btnAdicionarUsuario.FlatAppearance.BorderColor = SystemColors.Highlight;
+            btnAdicionarUsuario.FlatAppearance.MouseDownBackColor = Color.DeepSkyBlue;
+            btnAdicionarUsuario.FlatAppearance.MouseOverBackColor = Color.Blue;
+            btnAdicionarUsuario.FlatStyle = FlatStyle.Flat;
             btnAdicionarUsuario.Font = new Font("Georgia", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAdicionarUsuario.ForeColor = SystemColors.Window;
-            btnAdicionarUsuario.Location = new Point(85, 285);
+            btnAdicionarUsuario.Location = new Point(92, 285);
             btnAdicionarUsuario.Name = "btnAdicionarUsuario";
             btnAdicionarUsuario.Size = new Size(83, 33);
             btnAdicionarUsuario.TabIndex = 18;
@@ -122,23 +127,43 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.DarkRed;
+            panel1.BackColor = Color.Silver;
+            panel1.Controls.Add(btnSair);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(pictureBox4);
             panel1.Location = new Point(-6, -5);
             panel1.Name = "panel1";
             panel1.Size = new Size(375, 92);
             panel1.TabIndex = 19;
+            panel1.Paint += panel1_Paint;
             // 
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(165, 3);
+            pictureBox4.Location = new Point(138, 3);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(96, 89);
+            pictureBox4.Size = new Size(85, 89);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 1;
             pictureBox4.TabStop = false;
+            // 
+            // btnSair
+            // 
+            btnSair.BackColor = Color.Silver;
+            btnSair.FlatAppearance.BorderColor = SystemColors.ControlText;
+            btnSair.FlatAppearance.BorderSize = 0;
+            btnSair.FlatAppearance.MouseDownBackColor = Color.Gainsboro;
+            btnSair.FlatAppearance.MouseOverBackColor = Color.Gray;
+            btnSair.FlatStyle = FlatStyle.Flat;
+            btnSair.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSair.ForeColor = SystemColors.InfoText;
+            btnSair.Location = new Point(238, 3);
+            btnSair.Name = "btnSair";
+            btnSair.Size = new Size(24, 27);
+            btnSair.TabIndex = 20;
+            btnSair.Text = "X";
+            btnSair.UseVisualStyleBackColor = false;
+            btnSair.Click += btnSair_Click;
             // 
             // Login
             // 
@@ -153,8 +178,11 @@
             Controls.Add(txtIdLogin);
             Controls.Add(label2);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Login";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
+            Load += Login_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
@@ -174,5 +202,6 @@
         private Button btnAdicionarUsuario;
         private Panel panel1;
         private PictureBox pictureBox4;
+        private Button btnSair;
     }
 }
