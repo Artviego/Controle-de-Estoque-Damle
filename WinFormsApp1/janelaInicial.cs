@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -59,6 +60,11 @@ namespace WinFormsApp1
         private void mainPanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnFiltro_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

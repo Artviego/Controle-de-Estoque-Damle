@@ -51,5 +51,36 @@ namespace WinFormsApp1
             dt.Load(temp);
             dtGridEstoque.DataSource = dt;
         }
+
+        private void dtGridEstoque_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnFiltro_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string filtro = txtFiltro.Text;
+                string campo = cboFiltro.Text;
+                if (campo == "ID")
+                {
+                    campo = "ID_peca";
+                }
+                MySqlDataReader temp = this.peca.ListarPecas(campo, filtro);
+                DataTable dt = new DataTable();
+                dt.Load(temp);
+                dtGridEstoque.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Os campos devem ser preenchidos.", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

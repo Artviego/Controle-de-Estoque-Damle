@@ -28,36 +28,363 @@
         /// </summary>
         private void InitializeComponent()
         {
+            dtgProdutos = new DataGridView();
+            groupBox1 = new GroupBox();
+            txtQuantidadeMin = new TextBox();
+            label2 = new Label();
+            txtQuantidadeMax = new TextBox();
             label1 = new Label();
+            lbAtual = new Label();
+            txtQuantidadeAtual = new TextBox();
+            txtModelo = new TextBox();
+            txtAno = new TextBox();
+            txtCategoria = new TextBox();
+            txtNome = new TextBox();
+            txtID = new TextBox();
+            lbQuantidade = new Label();
+            lbModelo = new Label();
+            lbAno = new Label();
+            lbCategoria = new Label();
+            lbNome = new Label();
+            lbID = new Label();
+            btnCadastrar = new Button();
+            btnEx = new Button();
+            groupBox2 = new GroupBox();
+            lbPesquisa = new Label();
+            txtFiltro = new TextBox();
+            cboFiltro = new ComboBox();
+            btnFiltro = new Button();
+            btnAlterar = new Button();
+            ((System.ComponentModel.ISupportInitialize)dtgProdutos).BeginInit();
+            groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
             SuspendLayout();
+            // 
+            // dtgProdutos
+            // 
+            dtgProdutos.AllowUserToAddRows = false;
+            dtgProdutos.AllowUserToDeleteRows = false;
+            dtgProdutos.BackgroundColor = SystemColors.ButtonFace;
+            dtgProdutos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgProdutos.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dtgProdutos.Location = new Point(311, 95);
+            dtgProdutos.Name = "dtgProdutos";
+            dtgProdutos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dtgProdutos.Size = new Size(588, 295);
+            dtgProdutos.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(txtQuantidadeMin);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(txtQuantidadeMax);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(lbAtual);
+            groupBox1.Controls.Add(txtQuantidadeAtual);
+            groupBox1.Controls.Add(txtModelo);
+            groupBox1.Controls.Add(txtAno);
+            groupBox1.Controls.Add(txtCategoria);
+            groupBox1.Controls.Add(txtNome);
+            groupBox1.Controls.Add(txtID);
+            groupBox1.Controls.Add(lbQuantidade);
+            groupBox1.Controls.Add(lbModelo);
+            groupBox1.Controls.Add(lbAno);
+            groupBox1.Controls.Add(lbCategoria);
+            groupBox1.Controls.Add(lbNome);
+            groupBox1.Controls.Add(lbID);
+            groupBox1.Location = new Point(12, 95);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(293, 295);
+            groupBox1.TabIndex = 1;
+            groupBox1.TabStop = false;
+            // 
+            // txtQuantidadeMin
+            // 
+            txtQuantidadeMin.Location = new Point(198, 254);
+            txtQuantidadeMin.Name = "txtQuantidadeMin";
+            txtQuantidadeMin.Size = new Size(58, 23);
+            txtQuantidadeMin.TabIndex = 18;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(196, 236);
+            label2.Name = "label2";
+            label2.Size = new Size(48, 15);
+            label2.TabIndex = 17;
+            label2.Text = "Mínima";
+            // 
+            // txtQuantidadeMax
+            // 
+            txtQuantidadeMax.Location = new Point(110, 254);
+            txtQuantidadeMax.Name = "txtQuantidadeMax";
+            txtQuantidadeMax.Size = new Size(58, 23);
+            txtQuantidadeMax.TabIndex = 16;
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(288, 197);
+            label1.Location = new Point(110, 236);
             label1.Name = "label1";
-            label1.Size = new Size(221, 50);
-            label1.TabIndex = 2;
-            label1.Text = "PRODUTOS";
+            label1.Size = new Size(49, 15);
+            label1.TabIndex = 15;
+            label1.Text = "Máxima";
+            // 
+            // lbAtual
+            // 
+            lbAtual.AutoSize = true;
+            lbAtual.Location = new Point(24, 236);
+            lbAtual.Name = "lbAtual";
+            lbAtual.Size = new Size(35, 15);
+            lbAtual.TabIndex = 14;
+            lbAtual.Text = "Atual";
+            // 
+            // txtQuantidadeAtual
+            // 
+            txtQuantidadeAtual.Location = new Point(24, 254);
+            txtQuantidadeAtual.Name = "txtQuantidadeAtual";
+            txtQuantidadeAtual.Size = new Size(58, 23);
+            txtQuantidadeAtual.TabIndex = 13;
+            // 
+            // txtModelo
+            // 
+            txtModelo.Location = new Point(153, 37);
+            txtModelo.Name = "txtModelo";
+            txtModelo.Size = new Size(103, 23);
+            txtModelo.TabIndex = 12;
+            // 
+            // txtAno
+            // 
+            txtAno.Location = new Point(153, 161);
+            txtAno.Name = "txtAno";
+            txtAno.Size = new Size(70, 23);
+            txtAno.TabIndex = 11;
+            // 
+            // txtCategoria
+            // 
+            txtCategoria.Location = new Point(24, 161);
+            txtCategoria.Name = "txtCategoria";
+            txtCategoria.Size = new Size(103, 23);
+            txtCategoria.TabIndex = 10;
+            // 
+            // txtNome
+            // 
+            txtNome.Location = new Point(24, 97);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(199, 23);
+            txtNome.TabIndex = 9;
+            // 
+            // txtID
+            // 
+            txtID.Location = new Point(24, 37);
+            txtID.Name = "txtID";
+            txtID.Size = new Size(87, 23);
+            txtID.TabIndex = 2;
+            // 
+            // lbQuantidade
+            // 
+            lbQuantidade.AutoSize = true;
+            lbQuantidade.Location = new Point(24, 210);
+            lbQuantidade.Name = "lbQuantidade";
+            lbQuantidade.Size = new Size(69, 15);
+            lbQuantidade.TabIndex = 7;
+            lbQuantidade.Text = "Quantidade";
+            // 
+            // lbModelo
+            // 
+            lbModelo.AutoSize = true;
+            lbModelo.Location = new Point(153, 19);
+            lbModelo.Name = "lbModelo";
+            lbModelo.Size = new Size(48, 15);
+            lbModelo.TabIndex = 6;
+            lbModelo.Text = "Modelo";
+            // 
+            // lbAno
+            // 
+            lbAno.AutoSize = true;
+            lbAno.Location = new Point(153, 143);
+            lbAno.Name = "lbAno";
+            lbAno.Size = new Size(29, 15);
+            lbAno.TabIndex = 5;
+            lbAno.Text = "Ano";
+            // 
+            // lbCategoria
+            // 
+            lbCategoria.AutoSize = true;
+            lbCategoria.Location = new Point(24, 143);
+            lbCategoria.Name = "lbCategoria";
+            lbCategoria.Size = new Size(58, 15);
+            lbCategoria.TabIndex = 4;
+            lbCategoria.Text = "Categoria";
+            // 
+            // lbNome
+            // 
+            lbNome.AutoSize = true;
+            lbNome.Location = new Point(24, 79);
+            lbNome.Name = "lbNome";
+            lbNome.Size = new Size(40, 15);
+            lbNome.TabIndex = 3;
+            lbNome.Text = "Nome";
+            // 
+            // lbID
+            // 
+            lbID.AutoSize = true;
+            lbID.Location = new Point(24, 19);
+            lbID.Name = "lbID";
+            lbID.Size = new Size(18, 15);
+            lbID.TabIndex = 2;
+            lbID.Text = "ID";
+            // 
+            // btnCadastrar
+            // 
+            btnCadastrar.BackColor = Color.Gainsboro;
+            btnCadastrar.FlatAppearance.BorderColor = Color.Silver;
+            btnCadastrar.FlatAppearance.MouseDownBackColor = Color.WhiteSmoke;
+            btnCadastrar.FlatAppearance.MouseOverBackColor = Color.Gray;
+            btnCadastrar.FlatStyle = FlatStyle.Flat;
+            btnCadastrar.Location = new Point(165, 396);
+            btnCadastrar.Name = "btnCadastrar";
+            btnCadastrar.Size = new Size(91, 26);
+            btnCadastrar.TabIndex = 19;
+            btnCadastrar.Text = "Cadastrar";
+            btnCadastrar.UseVisualStyleBackColor = false;
+            btnCadastrar.Click += btnSalvar_Click;
+            // 
+            // btnEx
+            // 
+            btnEx.BackColor = Color.Gainsboro;
+            btnEx.FlatAppearance.BorderColor = Color.Silver;
+            btnEx.FlatAppearance.MouseDownBackColor = Color.WhiteSmoke;
+            btnEx.FlatAppearance.MouseOverBackColor = Color.Gray;
+            btnEx.FlatStyle = FlatStyle.Flat;
+            btnEx.Location = new Point(397, 29);
+            btnEx.Name = "btnEx";
+            btnEx.Size = new Size(91, 26);
+            btnEx.TabIndex = 20;
+            btnEx.Text = "Excluir";
+            btnEx.UseVisualStyleBackColor = false;
+            btnEx.Click += btnEx_Click;
+            // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(lbPesquisa);
+            groupBox2.Controls.Add(btnEx);
+            groupBox2.Controls.Add(txtFiltro);
+            groupBox2.Controls.Add(cboFiltro);
+            groupBox2.Controls.Add(btnFiltro);
+            groupBox2.Location = new Point(12, 12);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(516, 67);
+            groupBox2.TabIndex = 21;
+            groupBox2.TabStop = false;
+            // 
+            // lbPesquisa
+            // 
+            lbPesquisa.AutoSize = true;
+            lbPesquisa.Location = new Point(20, 14);
+            lbPesquisa.Name = "lbPesquisa";
+            lbPesquisa.Size = new Size(34, 15);
+            lbPesquisa.TabIndex = 20;
+            lbPesquisa.Text = "Filtro";
+            // 
+            // txtFiltro
+            // 
+            txtFiltro.Location = new Point(153, 31);
+            txtFiltro.Name = "txtFiltro";
+            txtFiltro.Size = new Size(121, 23);
+            txtFiltro.TabIndex = 19;
+            // 
+            // cboFiltro
+            // 
+            cboFiltro.FormattingEnabled = true;
+            cboFiltro.Items.AddRange(new object[] { "ID", "Nome", "Categoria", "Ano", "Modelo", "Quantidade Aual", "Quantidade  Máx", "Quantidade Mín" });
+            cboFiltro.Location = new Point(20, 32);
+            cboFiltro.Name = "cboFiltro";
+            cboFiltro.Size = new Size(121, 23);
+            cboFiltro.TabIndex = 1;
+            // 
+            // btnFiltro
+            // 
+            btnFiltro.BackColor = Color.Gainsboro;
+            btnFiltro.FlatAppearance.BorderColor = Color.Silver;
+            btnFiltro.FlatAppearance.MouseDownBackColor = Color.WhiteSmoke;
+            btnFiltro.FlatAppearance.MouseOverBackColor = Color.DarkGray;
+            btnFiltro.FlatStyle = FlatStyle.Flat;
+            btnFiltro.Location = new Point(299, 30);
+            btnFiltro.Name = "btnFiltro";
+            btnFiltro.Size = new Size(82, 23);
+            btnFiltro.TabIndex = 0;
+            btnFiltro.Text = "Filtrar";
+            btnFiltro.UseVisualStyleBackColor = false;
+            btnFiltro.Click += btnFiltro_Click;
+            // 
+            // btnAlterar
+            // 
+            btnAlterar.BackColor = Color.Gainsboro;
+            btnAlterar.FlatAppearance.BorderColor = Color.Silver;
+            btnAlterar.FlatAppearance.MouseDownBackColor = Color.WhiteSmoke;
+            btnAlterar.FlatAppearance.MouseOverBackColor = Color.Gray;
+            btnAlterar.FlatStyle = FlatStyle.Flat;
+            btnAlterar.Location = new Point(48, 396);
+            btnAlterar.Name = "btnAlterar";
+            btnAlterar.Size = new Size(91, 26);
+            btnAlterar.TabIndex = 22;
+            btnAlterar.Text = "Alterar";
+            btnAlterar.UseVisualStyleBackColor = false;
+            btnAlterar.Click += button1_Click;
             // 
             // Produtos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonFace;
-            ClientSize = new Size(800, 450);
-            Controls.Add(label1);
+            ClientSize = new Size(911, 441);
+            Controls.Add(btnAlterar);
+            Controls.Add(groupBox2);
+            Controls.Add(btnCadastrar);
+            Controls.Add(groupBox1);
+            Controls.Add(dtgProdutos);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Produtos";
             Text = "Produtos";
+            Load += Produtos_Load;
+            ((System.ComponentModel.ISupportInitialize)dtgProdutos).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
+        private DataGridView dtgProdutos;
+        private GroupBox groupBox1;
+        private Label lbNome;
+        private Label lbID;
+        private Label lbQuantidade;
+        private Label lbModelo;
+        private Label lbAno;
+        private Label lbCategoria;
+        private TextBox txtAno;
+        private TextBox txtCategoria;
+        private TextBox txtNome;
+        private TextBox txtID;
+        private ComboBox cboQuantidade;
+        private TextBox txtQuantidadeAtual;
+        private TextBox txtModelo;
+        private Button btnCadastrar;
+        private Button btnEx;
+        private GroupBox groupBox2;
+        private Label lbPesquisa;
+        private TextBox txtFiltro;
+        private ComboBox cboFiltro;
+        private Button btnFiltro;
+        private TextBox txtQuantidadeMin;
+        private Label label2;
+        private TextBox txtQuantidadeMax;
         private Label label1;
+        private Label lbAtual;
+        private Button btnAlterar;
     }
 }

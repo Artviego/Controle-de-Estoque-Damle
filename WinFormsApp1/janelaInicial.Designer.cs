@@ -99,7 +99,7 @@
             btnSaida.ImageAlign = ContentAlignment.MiddleLeft;
             btnSaida.ImageKey = "caixa-de-saida.png";
             btnSaida.ImageList = imageList1;
-            btnSaida.Location = new Point(35, 331);
+            btnSaida.Location = new Point(35, 382);
             btnSaida.Name = "btnSaida";
             btnSaida.Size = new Size(147, 65);
             btnSaida.TabIndex = 4;
@@ -130,7 +130,7 @@
             btnEstoque.ImageAlign = ContentAlignment.MiddleLeft;
             btnEstoque.ImageKey = "caixa-de-papelao-fechada.png";
             btnEstoque.ImageList = imageList1;
-            btnEstoque.Location = new Point(35, 107);
+            btnEstoque.Location = new Point(35, 124);
             btnEstoque.Name = "btnEstoque";
             btnEstoque.Size = new Size(90, 45);
             btnEstoque.TabIndex = 1;
@@ -151,7 +151,7 @@
             btnEntrada.ImageAlign = ContentAlignment.MiddleLeft;
             btnEntrada.ImageKey = "caixa-de-entrada.png";
             btnEntrada.ImageList = imageList1;
-            btnEntrada.Location = new Point(35, 240);
+            btnEntrada.Location = new Point(35, 283);
             btnEntrada.Name = "btnEntrada";
             btnEntrada.Size = new Size(159, 64);
             btnEntrada.TabIndex = 3;
@@ -172,7 +172,7 @@
             btnProdutos.ImageAlign = ContentAlignment.MiddleLeft;
             btnProdutos.ImageKey = "abra-a-caixa-de-papelao.png";
             btnProdutos.ImageList = imageList1;
-            btnProdutos.Location = new Point(35, 173);
+            btnProdutos.Location = new Point(35, 205);
             btnProdutos.Name = "btnProdutos";
             btnProdutos.Size = new Size(101, 48);
             btnProdutos.TabIndex = 2;
@@ -183,19 +183,19 @@
             // 
             // btnSair
             // 
-            btnSair.BackColor = Color.DimGray;
+            btnSair.BackColor = Color.DarkRed;
             btnSair.FlatAppearance.BorderColor = SystemColors.ControlText;
             btnSair.FlatAppearance.BorderSize = 0;
-            btnSair.FlatAppearance.MouseDownBackColor = SystemColors.ActiveBorder;
-            btnSair.FlatAppearance.MouseOverBackColor = Color.DimGray;
+            btnSair.FlatAppearance.MouseDownBackColor = Color.Firebrick;
+            btnSair.FlatAppearance.MouseOverBackColor = Color.DarkRed;
             btnSair.FlatStyle = FlatStyle.Flat;
             btnSair.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSair.ForeColor = SystemColors.InfoText;
-            btnSair.Location = new Point(846, -3);
+            btnSair.Location = new Point(1102, -3);
             btnSair.Name = "btnSair";
             btnSair.Size = new Size(38, 22);
             btnSair.TabIndex = 15;
-            btnSair.Text = "X";
+            btnSair.Text = " X";
             btnSair.UseVisualStyleBackColor = false;
             btnSair.Click += btnSair_Click;
             // 
@@ -205,15 +205,15 @@
             panel2.Controls.Add(btnSair);
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(884, 19);
+            panel2.Size = new Size(1143, 19);
             panel2.TabIndex = 16;
             // 
             // mainPanel
             // 
             mainPanel.BackColor = SystemColors.ButtonFace;
-            mainPanel.Location = new Point(219, 172);
+            mainPanel.Location = new Point(219, 25);
             mainPanel.Name = "mainPanel";
-            mainPanel.Size = new Size(635, 206);
+            mainPanel.Size = new Size(921, 450);
             mainPanel.TabIndex = 17;
             mainPanel.Paint += mainPanel_Paint;
             // 
@@ -221,7 +221,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(882, 405);
+            ClientSize = new Size(1134, 480);
             Controls.Add(mainPanel);
             Controls.Add(panel2);
             Controls.Add(panelTop);

@@ -21,6 +21,7 @@ namespace WinFormsApp1
         private string quantidade_max;
         private string quantidade_min;
         private Estoque estoque;
+        private Produtos produto;
         
         public Peca()
         {
@@ -30,6 +31,24 @@ namespace WinFormsApp1
         public MySqlDataReader ListarPecas()
         {
             return this.estoque.Query("SELECT * FROM peca ORDER BY nome ASC");
+        }
+
+        public MySqlDataReader ListarPecas(string campo, string filtro)
+        {
+            if (filtro == "")
+            {
+                return ListarPecas();
+            }
+            return this.estoque.Query("SELECT * FROM peca WHERE "+ campo + " = '"+ filtro + "' ORDER BY nome ASC");
+        }
+
+        public MySqlDataReader ExcluirPecas(string campo, string filtro)
+        {
+            if (filtro == "")
+            {
+                return ListarPecas();
+            }
+            return this.produto.Query("DELET ");
         }
 
         public string Id_peca { get => id_peca; set => id_peca = value; }
