@@ -30,18 +30,11 @@
         {
             dtgProdutos = new DataGridView();
             groupBox1 = new GroupBox();
-            txtQuantidadeMin = new TextBox();
-            label2 = new Label();
-            txtQuantidadeMax = new TextBox();
-            label1 = new Label();
-            lbAtual = new Label();
-            txtQuantidadeAtual = new TextBox();
             txtModelo = new TextBox();
             txtAno = new TextBox();
             txtCategoria = new TextBox();
             txtNome = new TextBox();
             txtID = new TextBox();
-            lbQuantidade = new Label();
             lbModelo = new Label();
             lbAno = new Label();
             lbCategoria = new Label();
@@ -75,125 +68,61 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(txtQuantidadeMin);
-            groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(txtQuantidadeMax);
-            groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(lbAtual);
-            groupBox1.Controls.Add(txtQuantidadeAtual);
             groupBox1.Controls.Add(txtModelo);
             groupBox1.Controls.Add(txtAno);
             groupBox1.Controls.Add(txtCategoria);
             groupBox1.Controls.Add(txtNome);
             groupBox1.Controls.Add(txtID);
-            groupBox1.Controls.Add(lbQuantidade);
             groupBox1.Controls.Add(lbModelo);
             groupBox1.Controls.Add(lbAno);
             groupBox1.Controls.Add(lbCategoria);
             groupBox1.Controls.Add(lbNome);
             groupBox1.Controls.Add(lbID);
-            groupBox1.Location = new Point(12, 95);
+            groupBox1.Location = new Point(12, 120);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(293, 295);
+            groupBox1.Size = new Size(293, 238);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             // 
-            // txtQuantidadeMin
-            // 
-            txtQuantidadeMin.Location = new Point(198, 254);
-            txtQuantidadeMin.Name = "txtQuantidadeMin";
-            txtQuantidadeMin.Size = new Size(58, 23);
-            txtQuantidadeMin.TabIndex = 18;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(196, 236);
-            label2.Name = "label2";
-            label2.Size = new Size(48, 15);
-            label2.TabIndex = 17;
-            label2.Text = "Mínima";
-            // 
-            // txtQuantidadeMax
-            // 
-            txtQuantidadeMax.Location = new Point(110, 254);
-            txtQuantidadeMax.Name = "txtQuantidadeMax";
-            txtQuantidadeMax.Size = new Size(58, 23);
-            txtQuantidadeMax.TabIndex = 16;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(110, 236);
-            label1.Name = "label1";
-            label1.Size = new Size(49, 15);
-            label1.TabIndex = 15;
-            label1.Text = "Máxima";
-            // 
-            // lbAtual
-            // 
-            lbAtual.AutoSize = true;
-            lbAtual.Location = new Point(24, 236);
-            lbAtual.Name = "lbAtual";
-            lbAtual.Size = new Size(35, 15);
-            lbAtual.TabIndex = 14;
-            lbAtual.Text = "Atual";
-            // 
-            // txtQuantidadeAtual
-            // 
-            txtQuantidadeAtual.Location = new Point(24, 254);
-            txtQuantidadeAtual.Name = "txtQuantidadeAtual";
-            txtQuantidadeAtual.Size = new Size(58, 23);
-            txtQuantidadeAtual.TabIndex = 13;
-            // 
             // txtModelo
             // 
-            txtModelo.Location = new Point(153, 37);
+            txtModelo.Location = new Point(165, 44);
             txtModelo.Name = "txtModelo";
             txtModelo.Size = new Size(103, 23);
             txtModelo.TabIndex = 12;
             // 
             // txtAno
             // 
-            txtAno.Location = new Point(153, 161);
+            txtAno.Location = new Point(165, 168);
             txtAno.Name = "txtAno";
             txtAno.Size = new Size(70, 23);
             txtAno.TabIndex = 11;
             // 
             // txtCategoria
             // 
-            txtCategoria.Location = new Point(24, 161);
+            txtCategoria.Location = new Point(36, 168);
             txtCategoria.Name = "txtCategoria";
             txtCategoria.Size = new Size(103, 23);
             txtCategoria.TabIndex = 10;
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(24, 97);
+            txtNome.Location = new Point(36, 104);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(199, 23);
             txtNome.TabIndex = 9;
             // 
             // txtID
             // 
-            txtID.Location = new Point(24, 37);
+            txtID.Location = new Point(36, 44);
             txtID.Name = "txtID";
             txtID.Size = new Size(87, 23);
             txtID.TabIndex = 2;
             // 
-            // lbQuantidade
-            // 
-            lbQuantidade.AutoSize = true;
-            lbQuantidade.Location = new Point(24, 210);
-            lbQuantidade.Name = "lbQuantidade";
-            lbQuantidade.Size = new Size(69, 15);
-            lbQuantidade.TabIndex = 7;
-            lbQuantidade.Text = "Quantidade";
-            // 
             // lbModelo
             // 
             lbModelo.AutoSize = true;
-            lbModelo.Location = new Point(153, 19);
+            lbModelo.Location = new Point(165, 26);
             lbModelo.Name = "lbModelo";
             lbModelo.Size = new Size(48, 15);
             lbModelo.TabIndex = 6;
@@ -202,7 +131,7 @@
             // lbAno
             // 
             lbAno.AutoSize = true;
-            lbAno.Location = new Point(153, 143);
+            lbAno.Location = new Point(165, 150);
             lbAno.Name = "lbAno";
             lbAno.Size = new Size(29, 15);
             lbAno.TabIndex = 5;
@@ -211,7 +140,7 @@
             // lbCategoria
             // 
             lbCategoria.AutoSize = true;
-            lbCategoria.Location = new Point(24, 143);
+            lbCategoria.Location = new Point(36, 150);
             lbCategoria.Name = "lbCategoria";
             lbCategoria.Size = new Size(58, 15);
             lbCategoria.TabIndex = 4;
@@ -220,7 +149,7 @@
             // lbNome
             // 
             lbNome.AutoSize = true;
-            lbNome.Location = new Point(24, 79);
+            lbNome.Location = new Point(36, 86);
             lbNome.Name = "lbNome";
             lbNome.Size = new Size(40, 15);
             lbNome.TabIndex = 3;
@@ -229,7 +158,7 @@
             // lbID
             // 
             lbID.AutoSize = true;
-            lbID.Location = new Point(24, 19);
+            lbID.Location = new Point(36, 26);
             lbID.Name = "lbID";
             lbID.Size = new Size(18, 15);
             lbID.TabIndex = 2;
@@ -242,7 +171,7 @@
             btnCadastrar.FlatAppearance.MouseDownBackColor = Color.WhiteSmoke;
             btnCadastrar.FlatAppearance.MouseOverBackColor = Color.Gray;
             btnCadastrar.FlatStyle = FlatStyle.Flat;
-            btnCadastrar.Location = new Point(165, 396);
+            btnCadastrar.Location = new Point(165, 364);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(91, 26);
             btnCadastrar.TabIndex = 19;
@@ -325,7 +254,7 @@
             btnAlterar.FlatAppearance.MouseDownBackColor = Color.WhiteSmoke;
             btnAlterar.FlatAppearance.MouseOverBackColor = Color.Gray;
             btnAlterar.FlatStyle = FlatStyle.Flat;
-            btnAlterar.Location = new Point(48, 396);
+            btnAlterar.Location = new Point(48, 364);
             btnAlterar.Name = "btnAlterar";
             btnAlterar.Size = new Size(91, 26);
             btnAlterar.TabIndex = 22;
@@ -362,7 +291,6 @@
         private GroupBox groupBox1;
         private Label lbNome;
         private Label lbID;
-        private Label lbQuantidade;
         private Label lbModelo;
         private Label lbAno;
         private Label lbCategoria;
@@ -371,7 +299,6 @@
         private TextBox txtNome;
         private TextBox txtID;
         private ComboBox cboQuantidade;
-        private TextBox txtQuantidadeAtual;
         private TextBox txtModelo;
         private Button btnCadastrar;
         private Button btnEx;
@@ -380,11 +307,6 @@
         private TextBox txtFiltro;
         private ComboBox cboFiltro;
         private Button btnFiltro;
-        private TextBox txtQuantidadeMin;
-        private Label label2;
-        private TextBox txtQuantidadeMax;
-        private Label label1;
-        private Label lbAtual;
         private Button btnAlterar;
     }
 }

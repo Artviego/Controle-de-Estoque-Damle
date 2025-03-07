@@ -45,7 +45,7 @@ namespace WinFormsApp1
 
         private void Produtos_Load(object sender, EventArgs e)
         {
-            AtualizarDataGrid();    
+            AtualizarDataGrid();
         }
 
         private void AtualizarDataGrid()
@@ -61,7 +61,7 @@ namespace WinFormsApp1
         {
             try
             {
-                command = new MySqlCommand("INSERT INTO peca (id_peca, nome, categoria, ano_de_fabricacao, modelo, quantidade_atual, quantidade_max, quantidade_min) VALUES ('" + txtID.Text + "', '" + txtNome.Text + "', '" + txtCategoria.Text + "', '" + txtAno.Text + "', '" + txtModelo.Text + "', '" + txtQuantidadeAtual.Text + "', '" + txtQuantidadeMax.Text + "', '" + txtQuantidadeMin.Text + "')", conexao);
+                command = new MySqlCommand("INSERT INTO peca (id_peca, nome, categoria, ano_de_fabricacao, modelo) VALUES ('" + txtID.Text + "', '" + txtNome.Text + "', '" + txtCategoria.Text + "', '" + txtAno.Text + "', '" + txtModelo.Text +"')", conexao);
                 command.ExecuteNonQuery();
 
                 conexao.Close();
@@ -80,18 +80,15 @@ namespace WinFormsApp1
         {
             try
             {
-                using (MySqlCommand command = new MySqlCommand("UPDATE peca SET nome = @nome, categoria = @categoria, ano_de_fabricacao = @ano, " +
-                                                               "modelo = @modelo, quantidade_atual = @qtd_atual, quantidade_max = @qtd_max, quantidade_min = @qtd_min " +
+                using (MySqlCommand command = new MySqlCommand("UPDATE peca SET nome = IF(@nome != '', @nome, nome), categoria = IF(@categoria != '', @categoria, categoria), ano_de_fabricacao = IF(@ano != '', @ano, ano_de_fabricacao), " +
+                                                               "modelo = IF(@modelo != '', @modelo, modelo) " +
                                                                "WHERE id_peca = @id", conexao))
                 {
                     command.Parameters.AddWithValue("@id", txtID.Text);
-                    command.Parameters.AddWithValue("@nome", txtNome.Text);
-                    command.Parameters.AddWithValue("@categoria", txtCategoria.Text);
-                    command.Parameters.AddWithValue("@ano", txtAno.Text);
-                    command.Parameters.AddWithValue("@modelo", txtModelo.Text);
-                    command.Parameters.AddWithValue("@qtd_atual", txtQuantidadeAtual.Text);
-                    command.Parameters.AddWithValue("@qtd_max", txtQuantidadeMax.Text);
-                    command.Parameters.AddWithValue("@qtd_min", txtQuantidadeMin.Text);
+                    command.Parameters.AddWithValue("@nome", string.IsNullOrWhiteSpace(txtNome.Text) ? (object)DBNull.Value : txtNome.Text);
+                    command.Parameters.AddWithValue("@categoria", string.IsNullOrWhiteSpace(txtCategoria.Text) ? (object)DBNull.Value : txtCategoria.Text);
+                    command.Parameters.AddWithValue("@ano", string.IsNullOrWhiteSpace(txtAno.Text) ? (object)DBNull.Value : txtAno.Text);
+                    command.Parameters.AddWithValue("@modelo", string.IsNullOrWhiteSpace(txtModelo.Text) ? (object)DBNull.Value : txtModelo.Text);
 
                     int rowsAffected = command.ExecuteNonQuery();
 
