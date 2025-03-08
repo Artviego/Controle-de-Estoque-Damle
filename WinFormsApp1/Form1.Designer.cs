@@ -37,6 +37,7 @@
             txtEmail = new TextBox();
             btnAdicionarUsuario = new Button();
             panel1 = new Panel();
+            panel2 = new Panel();
             label9 = new Label();
             label8 = new Label();
             label6 = new Label();
@@ -49,7 +50,6 @@
             label11 = new Label();
             btnSair = new Button();
             btVerSenha = new PictureBox();
-            panel2 = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btVerSenha).BeginInit();
@@ -57,6 +57,7 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Location = new Point(371, 95);
             label1.Name = "label1";
@@ -67,6 +68,7 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.Location = new Point(371, 157);
             label2.Name = "label2";
@@ -76,6 +78,7 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.Location = new Point(371, 218);
             label3.Name = "label3";
@@ -85,6 +88,7 @@
             // 
             // txtID
             // 
+            txtID.Anchor = AnchorStyles.None;
             txtID.BackColor = Color.LightGray;
             txtID.Location = new Point(371, 113);
             txtID.Name = "txtID";
@@ -93,6 +97,7 @@
             // 
             // txtSenha
             // 
+            txtSenha.Anchor = AnchorStyles.None;
             txtSenha.BackColor = Color.LightGray;
             txtSenha.Location = new Point(371, 236);
             txtSenha.Name = "txtSenha";
@@ -101,6 +106,7 @@
             // 
             // txtEmail
             // 
+            txtEmail.Anchor = AnchorStyles.None;
             txtEmail.BackColor = Color.LightGray;
             txtEmail.Location = new Point(371, 175);
             txtEmail.Name = "txtEmail";
@@ -109,6 +115,7 @@
             // 
             // btnAdicionarUsuario
             // 
+            btnAdicionarUsuario.Anchor = AnchorStyles.None;
             btnAdicionarUsuario.BackColor = SystemColors.Highlight;
             btnAdicionarUsuario.FlatAppearance.BorderColor = SystemColors.Highlight;
             btnAdicionarUsuario.FlatAppearance.BorderSize = 2;
@@ -127,6 +134,7 @@
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.None;
             panel1.BackColor = Color.Maroon;
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(label9);
@@ -141,6 +149,16 @@
             panel1.Size = new Size(285, 432);
             panel1.TabIndex = 7;
             panel1.Paint += panel1_Paint;
+            // 
+            // panel2
+            // 
+            panel2.Location = new Point(3, 3);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(585, 25);
+            panel2.TabIndex = 22;
+            panel2.MouseDown += panel2_MouseDown;
+            panel2.MouseMove += panel2_MouseMove;
+            panel2.MouseUp += panel2_MouseUp;
             // 
             // label9
             // 
@@ -226,6 +244,7 @@
             // 
             // label10
             // 
+            label10.Anchor = AnchorStyles.None;
             label10.AutoSize = true;
             label10.Font = new Font("Georgia", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label10.Location = new Point(371, 43);
@@ -236,6 +255,7 @@
             // 
             // button1
             // 
+            button1.Anchor = AnchorStyles.None;
             button1.BackColor = SystemColors.Window;
             button1.Font = new Font("Georgia", 9F, FontStyle.Underline, GraphicsUnit.Point, 0);
             button1.ForeColor = SystemColors.Highlight;
@@ -249,6 +269,7 @@
             // 
             // label11
             // 
+            label11.Anchor = AnchorStyles.None;
             label11.AutoSize = true;
             label11.Font = new Font("Georgia", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label11.Location = new Point(351, 359);
@@ -287,16 +308,6 @@
             btVerSenha.TabStop = false;
             btVerSenha.MouseDown += btVerSenha_MouseDown;
             btVerSenha.MouseUp += btVerSenha_MouseUp;
-            // 
-            // panel2
-            // 
-            panel2.Location = new Point(3, 3);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(585, 25);
-            panel2.TabIndex = 22;
-            panel2.MouseDown += panel2_MouseDown;
-            panel2.MouseMove += panel2_MouseMove;
-            panel2.MouseUp += panel2_MouseUp;
             // 
             // Form1
             // 
