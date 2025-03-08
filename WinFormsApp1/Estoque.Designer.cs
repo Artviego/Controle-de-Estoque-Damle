@@ -34,6 +34,8 @@
             txtFiltro = new TextBox();
             cboFiltro = new ComboBox();
             btnFiltro = new Button();
+            label2 = new Label();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)dtGridEstoque).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -43,6 +45,7 @@
             dtGridEstoque.AllowUserToAddRows = false;
             dtGridEstoque.AllowUserToDeleteRows = false;
             dtGridEstoque.AllowUserToOrderColumns = true;
+            dtGridEstoque.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dtGridEstoque.BackgroundColor = SystemColors.ButtonFace;
             dtGridEstoque.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtGridEstoque.EditMode = DataGridViewEditMode.EditProgrammatically;
@@ -51,7 +54,6 @@
             dtGridEstoque.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dtGridEstoque.Size = new Size(789, 203);
             dtGridEstoque.TabIndex = 0;
-            dtGridEstoque.CellContentClick += dtGridEstoque_CellContentClick;
             // 
             // groupBox1
             // 
@@ -70,6 +72,7 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.ForeColor = SystemColors.MenuText;
             label1.Location = new Point(44, 13);
             label1.Name = "label1";
             label1.Size = new Size(34, 15);
@@ -99,6 +102,7 @@
             btnFiltro.FlatAppearance.MouseDownBackColor = Color.WhiteSmoke;
             btnFiltro.FlatAppearance.MouseOverBackColor = Color.DarkGray;
             btnFiltro.FlatStyle = FlatStyle.Flat;
+            btnFiltro.ForeColor = SystemColors.ActiveCaptionText;
             btnFiltro.Location = new Point(83, 112);
             btnFiltro.Name = "btnFiltro";
             btnFiltro.Size = new Size(82, 23);
@@ -107,14 +111,37 @@
             btnFiltro.UseVisualStyleBackColor = false;
             btnFiltro.Click += btnFiltro_Click;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(96, 16);
+            label2.Name = "label2";
+            label2.Size = new Size(38, 15);
+            label2.TabIndex = 20;
+            label2.Text = "label2";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = SystemColors.WindowText;
+            label3.Location = new Point(53, 115);
+            label3.Name = "label3";
+            label3.Size = new Size(319, 65);
+            label3.TabIndex = 21;
+            label3.Text = "Estoque Atual";
+            // 
             // Estoque
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ButtonFace;
+            BackColor = Color.WhiteSmoke;
             ClientSize = new Size(911, 450);
+            Controls.Add(label3);
+            Controls.Add(label2);
             Controls.Add(groupBox1);
             Controls.Add(dtGridEstoque);
+            ForeColor = SystemColors.ControlLightLight;
             FormBorderStyle = FormBorderStyle.None;
             Name = "Estoque";
             Text = "Estoque";
@@ -123,6 +150,7 @@
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -133,5 +161,7 @@
         private ComboBox cboFiltro;
         private Button btnFiltro;
         private Label label1;
+        private Label label2;
+        private Label label3;
     }
 }

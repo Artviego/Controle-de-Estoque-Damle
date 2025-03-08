@@ -38,19 +38,23 @@
             label4 = new Label();
             btnAdicionarUsuario = new Button();
             panel1 = new Panel();
-            pictureBox4 = new PictureBox();
             btnSair = new Button();
+            pictureBox4 = new PictureBox();
+            btVerSenha = new PictureBox();
+            panel2 = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btVerSenha).BeginInit();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.BackColor = Color.Silver;
+            label1.BackColor = Color.Maroon;
             label1.Font = new Font("Georgia", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.Window;
-            label1.Location = new Point(74, 28);
+            label1.Location = new Point(98, 42);
             label1.Name = "label1";
             label1.Size = new Size(83, 31);
             label1.TabIndex = 0;
@@ -94,7 +98,7 @@
             // txtSenhaLogin
             // 
             txtSenhaLogin.BackColor = Color.LightGray;
-            txtSenhaLogin.Location = new Point(68, 240);
+            txtSenhaLogin.Location = new Point(68, 245);
             txtSenhaLogin.Name = "txtSenhaLogin";
             txtSenhaLogin.Size = new Size(133, 23);
             txtSenhaLogin.TabIndex = 16;
@@ -102,7 +106,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(68, 222);
+            label4.Location = new Point(68, 227);
             label4.Name = "label4";
             label4.Size = new Size(39, 15);
             label4.TabIndex = 15;
@@ -117,7 +121,7 @@
             btnAdicionarUsuario.FlatStyle = FlatStyle.Flat;
             btnAdicionarUsuario.Font = new Font("Georgia", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAdicionarUsuario.ForeColor = SystemColors.Window;
-            btnAdicionarUsuario.Location = new Point(92, 285);
+            btnAdicionarUsuario.Location = new Point(92, 296);
             btnAdicionarUsuario.Name = "btnAdicionarUsuario";
             btnAdicionarUsuario.Size = new Size(83, 33);
             btnAdicionarUsuario.TabIndex = 18;
@@ -127,8 +131,8 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Silver;
-            panel1.Controls.Add(btnSair);
+            panel1.BackColor = Color.Maroon;
+            panel1.Controls.Add(panel2);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(pictureBox4);
             panel1.Location = new Point(-6, -5);
@@ -137,39 +141,64 @@
             panel1.TabIndex = 19;
             panel1.Paint += panel1_Paint;
             // 
-            // pictureBox4
-            // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(138, 3);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(85, 89);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 1;
-            pictureBox4.TabStop = false;
-            // 
             // btnSair
             // 
-            btnSair.BackColor = Color.Silver;
+            btnSair.BackColor = Color.Red;
             btnSair.FlatAppearance.BorderColor = SystemColors.ControlText;
             btnSair.FlatAppearance.BorderSize = 0;
-            btnSair.FlatAppearance.MouseDownBackColor = Color.Gainsboro;
-            btnSair.FlatAppearance.MouseOverBackColor = Color.Gray;
+            btnSair.FlatAppearance.MouseDownBackColor = Color.Firebrick;
+            btnSair.FlatAppearance.MouseOverBackColor = Color.Red;
             btnSair.FlatStyle = FlatStyle.Flat;
             btnSair.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnSair.ForeColor = SystemColors.InfoText;
-            btnSair.Location = new Point(238, 3);
+            btnSair.ForeColor = Color.Black;
+            btnSair.Location = new Point(232, 0);
             btnSair.Name = "btnSair";
-            btnSair.Size = new Size(24, 27);
+            btnSair.Size = new Size(27, 22);
             btnSair.TabIndex = 20;
             btnSair.Text = "X";
             btnSair.UseVisualStyleBackColor = false;
             btnSair.Click += btnSair_Click;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(7, 17);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(92, 82);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 1;
+            pictureBox4.TabStop = false;
+            // 
+            // btVerSenha
+            // 
+            btVerSenha.Cursor = Cursors.Hand;
+            btVerSenha.Image = Properties.Resources.invisivel;
+            btVerSenha.Location = new Point(207, 245);
+            btVerSenha.Name = "btVerSenha";
+            btVerSenha.Size = new Size(21, 23);
+            btVerSenha.SizeMode = PictureBoxSizeMode.StretchImage;
+            btVerSenha.TabIndex = 20;
+            btVerSenha.TabStop = false;
+            btVerSenha.MouseDown += btVerSenha_MouseDown;
+            btVerSenha.MouseUp += btVerSenha_MouseUp;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(btnSair);
+            panel2.Location = new Point(4, 3);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(259, 21);
+            panel2.TabIndex = 21;
+            panel2.MouseDown += panel2_MouseDown;
+            panel2.MouseMove += panel2_MouseMove;
+            panel2.MouseUp += panel2_MouseUp;
             // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(256, 341);
+            Controls.Add(btVerSenha);
             Controls.Add(btnAdicionarUsuario);
             Controls.Add(txtSenhaLogin);
             Controls.Add(label4);
@@ -186,6 +215,8 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btVerSenha).EndInit();
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -203,5 +234,7 @@
         private Panel panel1;
         private PictureBox pictureBox4;
         private Button btnSair;
+        private PictureBox btVerSenha;
+        private Panel panel2;
     }
 }

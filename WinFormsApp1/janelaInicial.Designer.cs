@@ -55,16 +55,16 @@
             // 
             // panelTop
             // 
-            panelTop.BackColor = Color.LightGray;
+            panelTop.BackColor = Color.Maroon;
             panelTop.BorderStyle = BorderStyle.Fixed3D;
             panelTop.Controls.Add(panel1);
             panelTop.Controls.Add(btnSaida);
             panelTop.Controls.Add(btnEstoque);
             panelTop.Controls.Add(btnEntrada);
             panelTop.Controls.Add(btnProdutos);
-            panelTop.Location = new Point(-5, -3);
+            panelTop.Location = new Point(-5, 12);
             panelTop.Name = "panelTop";
-            panelTop.Size = new Size(218, 507);
+            panelTop.Size = new Size(218, 470);
             panelTop.TabIndex = 4;
             // 
             // panel1
@@ -72,24 +72,24 @@
             panel1.BackColor = Color.Gray;
             panel1.BorderStyle = BorderStyle.Fixed3D;
             panel1.Controls.Add(pictureBox1);
-            panel1.Location = new Point(3, 1);
+            panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(213, 88);
+            panel1.Size = new Size(213, 103);
             panel1.TabIndex = 5;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(45, 1);
+            pictureBox1.Location = new Point(30, -2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(119, 89);
+            pictureBox1.Size = new Size(137, 98);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
             // 
             // btnSaida
             // 
-            btnSaida.BackColor = Color.Silver;
+            btnSaida.BackColor = Color.WhiteSmoke;
             btnSaida.FlatAppearance.BorderColor = Color.Black;
             btnSaida.FlatAppearance.MouseDownBackColor = Color.LightGray;
             btnSaida.FlatAppearance.MouseOverBackColor = Color.Gray;
@@ -99,7 +99,7 @@
             btnSaida.ImageAlign = ContentAlignment.MiddleLeft;
             btnSaida.ImageKey = "caixa-de-saida.png";
             btnSaida.ImageList = imageList1;
-            btnSaida.Location = new Point(35, 382);
+            btnSaida.Location = new Point(35, 369);
             btnSaida.Name = "btnSaida";
             btnSaida.Size = new Size(147, 65);
             btnSaida.TabIndex = 4;
@@ -120,7 +120,7 @@
             // 
             // btnEstoque
             // 
-            btnEstoque.BackColor = Color.Silver;
+            btnEstoque.BackColor = Color.WhiteSmoke;
             btnEstoque.FlatAppearance.BorderColor = Color.Black;
             btnEstoque.FlatAppearance.MouseDownBackColor = Color.LightGray;
             btnEstoque.FlatAppearance.MouseOverBackColor = Color.Gray;
@@ -132,7 +132,7 @@
             btnEstoque.ImageList = imageList1;
             btnEstoque.Location = new Point(35, 124);
             btnEstoque.Name = "btnEstoque";
-            btnEstoque.Size = new Size(90, 45);
+            btnEstoque.Size = new Size(101, 45);
             btnEstoque.TabIndex = 1;
             btnEstoque.Text = "Estoque";
             btnEstoque.TextAlign = ContentAlignment.MiddleRight;
@@ -141,7 +141,7 @@
             // 
             // btnEntrada
             // 
-            btnEntrada.BackColor = Color.Silver;
+            btnEntrada.BackColor = Color.WhiteSmoke;
             btnEntrada.FlatAppearance.BorderColor = Color.Black;
             btnEntrada.FlatAppearance.MouseDownBackColor = Color.LightGray;
             btnEntrada.FlatAppearance.MouseOverBackColor = Color.Gray;
@@ -151,7 +151,7 @@
             btnEntrada.ImageAlign = ContentAlignment.MiddleLeft;
             btnEntrada.ImageKey = "caixa-de-entrada.png";
             btnEntrada.ImageList = imageList1;
-            btnEntrada.Location = new Point(35, 283);
+            btnEntrada.Location = new Point(35, 274);
             btnEntrada.Name = "btnEntrada";
             btnEntrada.Size = new Size(159, 64);
             btnEntrada.TabIndex = 3;
@@ -162,7 +162,7 @@
             // 
             // btnProdutos
             // 
-            btnProdutos.BackColor = Color.Silver;
+            btnProdutos.BackColor = Color.WhiteSmoke;
             btnProdutos.FlatAppearance.BorderColor = Color.Black;
             btnProdutos.FlatAppearance.MouseDownBackColor = Color.LightGray;
             btnProdutos.FlatAppearance.MouseOverBackColor = Color.Gray;
@@ -172,7 +172,7 @@
             btnProdutos.ImageAlign = ContentAlignment.MiddleLeft;
             btnProdutos.ImageKey = "abra-a-caixa-de-papelao.png";
             btnProdutos.ImageList = imageList1;
-            btnProdutos.Location = new Point(35, 205);
+            btnProdutos.Location = new Point(35, 198);
             btnProdutos.Name = "btnProdutos";
             btnProdutos.Size = new Size(101, 48);
             btnProdutos.TabIndex = 2;
@@ -207,6 +207,9 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(1143, 19);
             panel2.TabIndex = 16;
+            panel2.MouseDown += panel2_MouseDown;
+            panel2.MouseMove += panel2_MouseMove;
+            panel2.MouseUp += panel2_MouseUp;
             // 
             // mainPanel
             // 
@@ -221,6 +224,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.LightGray;
             ClientSize = new Size(1134, 480);
             Controls.Add(mainPanel);
             Controls.Add(panel2);
@@ -229,6 +233,7 @@
             Name = "janelaInicial";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "janelaInicial";
+            Load += janelaInicial_Load;
             panelTop.ResumeLayout(false);
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

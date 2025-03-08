@@ -3,6 +3,7 @@ using System.Data;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Threading;
+using WinFormsApp1.Properties;
 
 namespace WinFormsApp1
 {
@@ -17,6 +18,8 @@ namespace WinFormsApp1
             Conexao = new MySqlConnection("server=localhost;username=root;password=;database=sistema_gestao_pecas");
             CarregarDadosUsuario();
         }
+        bool mouseDown;
+        Point lastLocation;
 
         private void CarregarDadosUsuario()
         {
@@ -142,6 +145,37 @@ namespace WinFormsApp1
         private void label9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btVerSenha_MouseDown(object sender, MouseEventArgs e)
+        {
+            txtSenha.UseSystemPasswordChar = false;
+            btVerSenha.Image = Resources.olho;
+        }
+
+        private void btVerSenha_MouseUp(object sender, MouseEventArgs e)
+        {
+            txtSenha.UseSystemPasswordChar = true;
+            btVerSenha.Image = Resources.invisivel;
+        }
+
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            lastLocation = e.Location;
+        }
+
+        private void panel2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                this.Location = new Point((this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
+            }
+        }
+
+        private void panel2_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
         }
     }
 }

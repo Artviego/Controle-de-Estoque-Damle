@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using MySql.Data.MySqlClient;
+using WinFormsApp1.Properties;
 
 namespace WinFormsApp1
 {
@@ -22,6 +23,8 @@ namespace WinFormsApp1
             InitializeComponent();
             Conexao = new MySqlConnection("server=localhost;username=root;password=;database=sistema_gestao_pecas");
         }
+        bool mouseDown;
+        Point lastLocation;
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
@@ -98,6 +101,37 @@ namespace WinFormsApp1
         private void btnSair_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btVerSenha_MouseDown(object sender, MouseEventArgs e)
+        {
+            txtSenhaLogin.UseSystemPasswordChar = false;
+            btVerSenha.Image = Resources.olho;
+        }
+
+        private void btVerSenha_MouseUp(object sender, MouseEventArgs e)
+        {
+            txtSenhaLogin.UseSystemPasswordChar = true;
+            btVerSenha.Image = Resources.invisivel;
+        }
+
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            lastLocation = e.Location;
+        }
+
+        private void panel2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                this.Location = new Point((this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
+            }
+        }
+
+        private void panel2_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
         }
     }
 }

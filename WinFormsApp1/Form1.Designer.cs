@@ -48,8 +48,11 @@
             button1 = new Button();
             label11 = new Label();
             btnSair = new Button();
+            btVerSenha = new PictureBox();
+            panel2 = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btVerSenha).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -124,7 +127,8 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Silver;
+            panel1.BackColor = Color.Maroon;
+            panel1.Controls.Add(panel2);
             panel1.Controls.Add(label9);
             panel1.Controls.Add(label8);
             panel1.Controls.Add(label6);
@@ -142,7 +146,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Georgia", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.ForeColor = Color.Black;
+            label9.ForeColor = SystemColors.Window;
             label9.ImageAlign = ContentAlignment.MiddleRight;
             label9.Location = new Point(155, 390);
             label9.Name = "label9";
@@ -155,7 +159,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Georgia", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.ForeColor = SystemColors.MenuText;
+            label8.ForeColor = SystemColors.Window;
             label8.ImageAlign = ContentAlignment.MiddleRight;
             label8.Location = new Point(167, 376);
             label8.Name = "label8";
@@ -168,7 +172,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Georgia", 15.75F);
-            label6.ForeColor = Color.Black;
+            label6.ForeColor = SystemColors.Window;
             label6.Location = new Point(107, 241);
             label6.Name = "label6";
             label6.Size = new Size(154, 25);
@@ -179,7 +183,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Georgia", 15.75F);
-            label7.ForeColor = Color.Black;
+            label7.ForeColor = SystemColors.Window;
             label7.Location = new Point(147, 266);
             label7.Name = "label7";
             label7.Size = new Size(114, 25);
@@ -190,7 +194,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Georgia", 15.75F);
-            label5.ForeColor = Color.Black;
+            label5.ForeColor = SystemColors.Window;
             label5.Location = new Point(147, 216);
             label5.Name = "label5";
             label5.Size = new Size(113, 25);
@@ -202,7 +206,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Georgia", 15.75F);
-            label4.ForeColor = Color.Black;
+            label4.ForeColor = SystemColors.Window;
             label4.Location = new Point(136, 162);
             label4.Name = "label4";
             label4.Size = new Size(125, 25);
@@ -255,21 +259,44 @@
             // 
             // btnSair
             // 
-            btnSair.BackColor = SystemColors.ButtonFace;
+            btnSair.BackColor = Color.Red;
             btnSair.FlatAppearance.BorderColor = SystemColors.ControlText;
             btnSair.FlatAppearance.BorderSize = 0;
-            btnSair.FlatAppearance.MouseDownBackColor = SystemColors.ActiveBorder;
-            btnSair.FlatAppearance.MouseOverBackColor = SystemColors.AppWorkspace;
+            btnSair.FlatAppearance.MouseDownBackColor = Color.Firebrick;
+            btnSair.FlatAppearance.MouseOverBackColor = Color.DarkRed;
             btnSair.FlatStyle = FlatStyle.Flat;
             btnSair.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSair.ForeColor = SystemColors.InfoText;
-            btnSair.Location = new Point(539, -2);
+            btnSair.Location = new Point(553, -2);
             btnSair.Name = "btnSair";
-            btnSair.Size = new Size(46, 31);
+            btnSair.Size = new Size(32, 25);
             btnSair.TabIndex = 14;
             btnSair.Text = "X";
             btnSair.UseVisualStyleBackColor = false;
             btnSair.Click += btnSair_Click;
+            // 
+            // btVerSenha
+            // 
+            btVerSenha.Cursor = Cursors.Hand;
+            btVerSenha.Image = Properties.Resources.invisivel;
+            btVerSenha.Location = new Point(514, 238);
+            btVerSenha.Name = "btVerSenha";
+            btVerSenha.Size = new Size(21, 23);
+            btVerSenha.SizeMode = PictureBoxSizeMode.StretchImage;
+            btVerSenha.TabIndex = 21;
+            btVerSenha.TabStop = false;
+            btVerSenha.MouseDown += btVerSenha_MouseDown;
+            btVerSenha.MouseUp += btVerSenha_MouseUp;
+            // 
+            // panel2
+            // 
+            panel2.Location = new Point(3, 3);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(585, 25);
+            panel2.TabIndex = 22;
+            panel2.MouseDown += panel2_MouseDown;
+            panel2.MouseMove += panel2_MouseMove;
+            panel2.MouseUp += panel2_MouseUp;
             // 
             // Form1
             // 
@@ -277,6 +304,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonFace;
             ClientSize = new Size(585, 420);
+            Controls.Add(btVerSenha);
             Controls.Add(btnSair);
             Controls.Add(label11);
             Controls.Add(button1);
@@ -297,6 +325,7 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btVerSenha).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -322,5 +351,7 @@
         private Button button1;
         private Label label11;
         private Button btnSair;
+        private PictureBox btVerSenha;
+        private Panel panel2;
     }
 }

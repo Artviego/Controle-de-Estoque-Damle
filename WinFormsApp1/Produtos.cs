@@ -65,7 +65,6 @@ namespace WinFormsApp1
                 command.ExecuteNonQuery();
 
                 conexao.Close();
-
             }
             catch (Exception ex)
             {

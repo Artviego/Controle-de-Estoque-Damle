@@ -42,8 +42,7 @@ namespace WinFormsApp1
             this.command.CommandText = sql;
             return this.command.ExecuteReader();
         }
-
-        private void Estoque_Load(object sender, EventArgs e)
+        private void AtualizarDataGrid()
         {
             this.peca = new Peca();
             MySqlDataReader temp = this.peca.ListarPecas();
@@ -52,9 +51,9 @@ namespace WinFormsApp1
             dtGridEstoque.DataSource = dt;
         }
 
-        private void dtGridEstoque_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Estoque_Load(object sender, EventArgs e)
         {
-
+            AtualizarDataGrid();
         }
 
         private void btnFiltro_Click(object sender, EventArgs e)

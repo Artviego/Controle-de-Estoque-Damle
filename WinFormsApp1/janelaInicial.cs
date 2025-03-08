@@ -17,6 +17,8 @@ namespace WinFormsApp1
         {
             InitializeComponent();
         }
+        bool mouseDown;
+        Point lastLocation;
 
         public void loadform(object Form)
         {
@@ -64,7 +66,31 @@ namespace WinFormsApp1
 
         private void btnFiltro_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            lastLocation = e.Location;
+        }
+
+        private void panel2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                this.Location = new Point((this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
+            }
+        }
+
+        private void janelaInicial_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
         }
     }
 }
